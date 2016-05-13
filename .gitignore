@@ -7,6 +7,10 @@
 .metadata
 bin/
 tmp/
+.vs
+Debug/
+Super mushrooms/Debug/
+*.sdf
 *.tmp
 *.bak
 *.swp

@@ -21,10 +21,10 @@
     <ClCompile Include="SuperMushRoom.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="CharacterAnimation.cpp">
+    <ClCompile Include="duel.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="duel.cpp">
+    <ClCompile Include="CharacterAnimation.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

@@ -46,9 +46,9 @@ struct Person
 	int turn;     //运动方向
 	int state;    //加载不同的图
 	int jump;    //是否跳跃
-	double v0 = 0;	 //跳跃的初速度
-	double h = 0;	 //跳跃的高度
-	double t = 0;	 //跳跃的时间
+	double v0;	 //跳跃的初速度
+	double h;	 //跳跃的高度
+	double t;	 //跳跃的时间
 	Map1 bullet[20];        //子弹 , 20颗
 	int n_bullet;  //第几颗子弹
 };

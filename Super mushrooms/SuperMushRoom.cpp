@@ -3392,8 +3392,8 @@ void SuperMushRoom::win()
 
 
 	chapter++;
-	if (chapter <= 8)
-	//if (chapter <= 4)
+	//if (chapter <= 8)
+	if (chapter <= 4)
 	{
 		GameState = (GameState + 1) * 10;  //ÓÃÓÚ·µ»Ø
 		return;

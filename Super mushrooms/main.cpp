@@ -44,7 +44,7 @@ void login()
 	remove_scrollbar();                                                               //隐藏滚动条
 	hideCursor();
 
-	ifstream fp("login.txt");                                                        //输出登录界面
+	ifstream fp(".\\res\\login.txt");                                                        //输出登录界面
 
 	char tempStr[300];
 	int i = 0;
@@ -63,7 +63,7 @@ void login()
 		++count;
 		if (count >= 300000)
 		{
-			CharacterAnimation A("yanshi.txt", "login.mp3", 260, 79 + 1);//46 + 1个空行   演示画面
+			CharacterAnimation A(".\\res\\yanshi.txt", ".\\res\\login.mp3", 260, 79 + 1);//46 + 1个空行   演示画面
 			A.display();
 			//system("cls");
 			Sleep(300);
@@ -142,7 +142,7 @@ void help()
 {
 	void gotoxy(int x, int y);                                                       //移动光标到x,y
 
-	ifstream fhelp("help.txt");                                                        //输出登录界面
+	ifstream fhelp(".\\res\\help.txt");                                                        //输出登录界面
 
 	char tempStr[300];
 	int i = 0;

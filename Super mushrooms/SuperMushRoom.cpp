@@ -219,7 +219,7 @@ void SuperMushRoom::randInit()
 	setWindows();
 
 	//基础地图
-	fp = fopen("chapter2plus.txt", "r");
+	fp = fopen(".\\res\\chapter2plus.txt", "r");
 
 	char ch;
 	int i = 0, j = 0, k = 0;
@@ -421,8 +421,8 @@ void SuperMushRoom::loadBackGround()
 	//加载背景
 	switch (chapter)
 	{
-	case 1:fp = fopen("chapter1_background.txt", "r"); break;
-	case 2:fp = fopen("chapter2_background.txt", "r"); break;
+	case 1:fp = fopen(".\\res\\chapter1_background.txt", "r"); break;
+	case 2:fp = fopen(".\\res\\chapter2_background.txt", "r"); break;
 	}
 	if (fp == NULL)
 	{
@@ -460,25 +460,25 @@ void SuperMushRoom::loadBackGround()
 void SuperMushRoom::loadMusic()
 {
 
-	mciSendString("open 背景音乐.mp3 alias bgm", NULL, 0, NULL);
-	mciSendString("open 子弹.mp3 alias bullet", NULL, 0, NULL);
-	mciSendString("open 金币.mp3 alias coin", NULL, 0, NULL);
-	mciSendString("open 跳.mp3 alias jump", NULL, 0, NULL);
-	mciSendString("open 子弹打到敌人.mp3 alias hit_enemy", NULL, 0, NULL);
-	mciSendString("open 子弹撞墙.mp3 alias hit_wall", NULL, 0, NULL);
-	mciSendString("open 撞击砖块.mp3 alias hit_brick", NULL, 0, NULL);
-	mciSendString("open 踩敌人.mp3 alias step", NULL, 0, NULL);
-	mciSendString("open 吃到武器.mp3 alias arm", NULL, 0, NULL);
-	mciSendString("open 胜利.mp3 alias win", NULL, 0, NULL);
-	mciSendString("open 死亡1.mp3 alias dead1", NULL, 0, NULL);
-	mciSendString("open 游戏结束.mp3 alias gameover", NULL, 0, NULL);
+	mciSendString("open .\\res\\背景音乐.mp3 alias bgm", NULL, 0, NULL);
+	mciSendString("open .\\res\\子弹.mp3 alias bullet", NULL, 0, NULL);
+	mciSendString("open .\\res\\金币.mp3 alias coin", NULL, 0, NULL);
+	mciSendString("open .\\res\\跳.mp3 alias jump", NULL, 0, NULL);
+	mciSendString("open .\\res\\子弹打到敌人.mp3 alias hit_enemy", NULL, 0, NULL);
+	mciSendString("open .\\res\\子弹撞墙.mp3 alias hit_wall", NULL, 0, NULL);
+	mciSendString("open .\\res\\撞击砖块.mp3 alias hit_brick", NULL, 0, NULL);
+	mciSendString("open .\\res\\踩敌人.mp3 alias step", NULL, 0, NULL);
+	mciSendString("open .\\res\\吃到武器.mp3 alias arm", NULL, 0, NULL);
+	mciSendString("open .\\res\\胜利.mp3 alias win", NULL, 0, NULL);
+	mciSendString("open .\\res\\死亡1.mp3 alias dead1", NULL, 0, NULL);
+	mciSendString("open .\\res\\游戏结束.mp3 alias gameover", NULL, 0, NULL);
 
-	mciSendString("open 魂斗罗背景.mp3 alias Sbgm", NULL, 0, NULL);
-	mciSendString("open 魂斗罗shoot.mp3 alias Sbullet", NULL, 0, NULL);
-	mciSendString("open 魂斗罗boom.mp3 alias Shit_enemy", NULL, 0, NULL);
-	mciSendString("open 魂斗罗boom.mp3 alias Sstep", NULL, 0, NULL);
-	mciSendString("open 魂斗罗吃到武器.mp3 alias Sarm", NULL, 0, NULL);
-	mciSendString("open 魂斗罗死亡1.mp3 alias Sdead1", NULL, 0, NULL);
+	mciSendString("open .\\res\\魂斗罗背景.mp3 alias Sbgm", NULL, 0, NULL);
+	mciSendString("open .\\res\\魂斗罗shoot.mp3 alias Sbullet", NULL, 0, NULL);
+	mciSendString("open .\\res\\魂斗罗boom.mp3 alias Shit_enemy", NULL, 0, NULL);
+	mciSendString("open .\\res\\魂斗罗boom.mp3 alias Sstep", NULL, 0, NULL);
+	mciSendString("open .\\res\\魂斗罗吃到武器.mp3 alias Sarm", NULL, 0, NULL);
+	mciSendString("open .\\res\\魂斗罗死亡1.mp3 alias Sdead1", NULL, 0, NULL);
 
 
 }
@@ -489,8 +489,8 @@ void SuperMushRoom::loadCoins()
 	ifstream fcoin;
 	switch (chapter)
 	{
-	case 1:fcoin.open("chapter1_coins.txt"); break;
-	case 2:fcoin.open("chapter2_coins.txt"); break;
+	case 1:fcoin.open(".\\res\\chapter1_coins.txt"); break;
+	case 2:fcoin.open(".\\res\\chapter2_coins.txt"); break;
 	}
 	if (!fcoin)
 	{
@@ -511,8 +511,8 @@ void SuperMushRoom::loadEnemy()
 	ifstream fenemy;
 	switch (chapter)
 	{
-	case 1:fenemy.open("chapter1_enemy.txt"); break;
-	case 2:fenemy.open("chapter2_enemy.txt"); break;
+	case 1:fenemy.open(".\\res\\chapter1_enemy.txt"); break;
+	case 2:fenemy.open(".\\res\\chapter2_enemy.txt"); break;
 	}
 	if (!fenemy)
 	{
@@ -2677,7 +2677,7 @@ void SuperMushRoom::SuperMushRoomPause()
 	while (_kbhit())
 		char c = _getch();
 
-	ifstream fp("pause.txt");                                                        //输出暂停界面
+	ifstream fp(".\\res\\pause.txt");                                                        //输出暂停界面
 	if (!fp)
 	{
 		cerr << "open pause.txt error" << endl;
@@ -3055,7 +3055,7 @@ void SuperMushRoom::dead()
 	life--;
 
 
-	ifstream fp("life.txt");                                                        //输出显示生命界面
+	ifstream fp(".\\res\\life.txt");                                                        //输出显示生命界面
 	if (!fp)
 	{
 		cerr << "open life.txt error" << endl;
@@ -3327,7 +3327,7 @@ void SuperMushRoom::dead()
 	{
 		mciSendString("play  gameover from 0", NULL, 0, NULL);
 
-		ifstream fp1("gameover.txt");                                                        //输出GameOver界面
+		ifstream fp1(".\\res\\gameover.txt");                                                        //输出GameOver界面
 		if (!fp1)
 		{
 			cerr << "open gameover.txt error" << endl;
@@ -3407,8 +3407,8 @@ void SuperMushRoom::win()
 		SetConsoleActiveScreenBuffer(hStdout);
 		//播放字符动画
 
-		CharacterAnimation A("win0.txt", "BadApple.mp3", 160, 60 + 1);//46 + 1个空行   演示画面
-		//CharacterAnimation A("win.txt", "BadApple.mp3", 240, 92, 71);//46 + 1个空行
+		CharacterAnimation A(".\\res\\win0.txt", ".\\res\\BadApple.mp3", 160, 60 + 1);//46 + 1个空行   演示画面
+		//CharacterAnimation A("win0.txt", "BadApple.mp3", 240, 92, 71);//46 + 1个空行
 		A.display();
 
 

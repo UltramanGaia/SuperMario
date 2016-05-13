@@ -222,7 +222,7 @@ void Duel::setWindows()
 void Duel::loadBackGround()
 {
 	//º”‘ÿ±≥æ∞
-	ifstream fp("duelBackground.txt");
+	ifstream fp(".\\res\\duelBackground.txt");
 	if (!fp)
 	{
 		cerr << "Open Background error" << endl;
@@ -260,27 +260,27 @@ void Duel::loadBackGround()
 void Duel::loadMusic()
 {
 
-	mciSendString("open ±≥æ∞“Ù¿÷.mp3 alias bgm", NULL, 0, NULL);
-	mciSendString("open ◊”µØ.mp3 alias bullet", NULL, 0, NULL);
-	mciSendString("open Ω±“.mp3 alias coin", NULL, 0, NULL);
-	mciSendString("open Ã¯.mp3 alias jump", NULL, 0, NULL);
-	mciSendString("open ◊”µØ¥ÚµΩµ–»À.mp3 alias hit_enemy", NULL, 0, NULL);
-	mciSendString("open ◊”µØ◊≤«Ω.mp3 alias hit_wall", NULL, 0, NULL);
-	mciSendString("open ◊≤ª˜◊©øÈ.mp3 alias hit_brick", NULL, 0, NULL);
-	mciSendString("open ≤»µ–»À.mp3 alias step", NULL, 0, NULL);
-	mciSendString("open ≥‘µΩŒ‰∆˜.mp3 alias arm", NULL, 0, NULL);
-	mciSendString("open  §¿˚.mp3 alias win", NULL, 0, NULL);
-	mciSendString("open À¿Õˆ1.mp3 alias dead1", NULL, 0, NULL);
-	mciSendString("open ”Œœ∑Ω· ¯.mp3 alias gameover", NULL, 0, NULL);
+	mciSendString("open .\\res\\±≥æ∞“Ù¿÷.mp3 alias bgm", NULL, 0, NULL);
+	mciSendString("open .\\res\\◊”µØ.mp3 alias bullet", NULL, 0, NULL);
+	mciSendString("open .\\res\\Ω±“.mp3 alias coin", NULL, 0, NULL);
+	mciSendString("open .\\res\\Ã¯.mp3 alias jump", NULL, 0, NULL);
+	mciSendString("open .\\res\\◊”µØ¥ÚµΩµ–»À.mp3 alias hit_enemy", NULL, 0, NULL);
+	mciSendString("open .\\res\\◊”µØ◊≤«Ω.mp3 alias hit_wall", NULL, 0, NULL);
+	mciSendString("open .\\res\\◊≤ª˜◊©øÈ.mp3 alias hit_brick", NULL, 0, NULL);
+	mciSendString("open .\\res\\≤»µ–»À.mp3 alias step", NULL, 0, NULL);
+	mciSendString("open .\\res\\≥‘µΩŒ‰∆˜.mp3 alias arm", NULL, 0, NULL);
+	mciSendString("open .\\res\\ §¿˚.mp3 alias win", NULL, 0, NULL);
+	mciSendString("open .\\res\\À¿Õˆ1.mp3 alias dead1", NULL, 0, NULL);
+	mciSendString("open .\\res\\”Œœ∑Ω· ¯.mp3 alias gameover", NULL, 0, NULL);
 
-	mciSendString("open ªÍ∂∑¬ﬁ±≥æ∞.mp3 alias Sbgm", NULL, 0, NULL);
-	mciSendString("open ªÍ∂∑¬ﬁshoot.mp3 alias Sbullet", NULL, 0, NULL);
-	mciSendString("open ªÍ∂∑¬ﬁboom.mp3 alias Shit_enemy", NULL, 0, NULL);
-	mciSendString("open ªÍ∂∑¬ﬁboom.mp3 alias Sstep", NULL, 0, NULL);
-	mciSendString("open ªÍ∂∑¬ﬁ≥‘µΩŒ‰∆˜.mp3 alias Sarm", NULL, 0, NULL);
-	mciSendString("open ªÍ∂∑¬ﬁÀ¿Õˆ1.mp3 alias Sdead1", NULL, 0, NULL);
+	mciSendString("open .\\res\\ªÍ∂∑¬ﬁ±≥æ∞.mp3 alias Sbgm", NULL, 0, NULL);
+	mciSendString("open .\\res\\ªÍ∂∑¬ﬁshoot.mp3 alias Sbullet", NULL, 0, NULL);
+	mciSendString("open .\\res\\ªÍ∂∑¬ﬁboom.mp3 alias Shit_enemy", NULL, 0, NULL);
+	mciSendString("open .\\res\\ªÍ∂∑¬ﬁboom.mp3 alias Sstep", NULL, 0, NULL);
+	mciSendString("open .\\res\\ªÍ∂∑¬ﬁ≥‘µΩŒ‰∆˜.mp3 alias Sarm", NULL, 0, NULL);
+	mciSendString("open .\\res\\ªÍ∂∑¬ﬁÀ¿Õˆ1.mp3 alias Sdead1", NULL, 0, NULL);
 
-	mciSendString("open boss.mp3 alias Bossbgm", NULL, 0, NULL);
+	mciSendString("open .\\res\\boss.mp3 alias Bossbgm", NULL, 0, NULL);
 
 
 }
@@ -290,7 +290,7 @@ void Duel::loadBlood()
 {
 	ifstream fcoin;
 
-	fcoin.open("chapter1_coins.txt");
+	fcoin.open(".\\res\\chapter1_coins.txt");
 
 	if (!fcoin)
 	{
@@ -1864,7 +1864,7 @@ void Duel::DuelPause()
 	while (_kbhit())
 		char c = _getch();
 
-	ifstream fp("pause.txt");                                                        // ‰≥ˆ‘›Õ£ΩÁ√Ê
+	ifstream fp(".\\res\\pause.txt");                                                        // ‰≥ˆ‘›Õ£ΩÁ√Ê
 	if (!fp)
 	{
 		cerr << "open pause.txt error" << endl;
@@ -2170,7 +2170,7 @@ void Duel::dead()
 
 	life--;
 
-	ifstream fp("life.txt");                                                        // ‰≥ˆœ‘ æ…˙√¸ΩÁ√Ê
+	ifstream fp(".\\res\\life.txt");                                                        // ‰≥ˆœ‘ æ…˙√¸ΩÁ√Ê
 	if (!fp)
 	{
 		cerr << "open life.txt error" << endl;
@@ -2442,7 +2442,7 @@ void Duel::dead()
 	{
 		mciSendString("play  gameover from 0", NULL, 0, NULL);
 
-		ifstream fp1("gameover.txt");                                                        // ‰≥ˆGameOverΩÁ√Ê
+		ifstream fp1(".\\res\\gameover.txt");                                                        // ‰≥ˆGameOverΩÁ√Ê
 		if (!fp1)
 		{
 			cerr << "open gameover.txt error" << endl;
@@ -2490,8 +2490,8 @@ void Duel::win()
 	SetConsoleActiveScreenBuffer(hStdout1);
 	//≤•∑≈◊÷∑˚∂Øª≠
 
-	CharacterAnimation A("win0.txt", "BadApple.mp3", 160, 60 + 1);//46 + 1∏ˆø’––   —› æª≠√Ê
-	//CharacterAnimation A("win.txt", "BadApple.mp3", 240, 92, 71);//46 + 1∏ˆø’––
+	CharacterAnimation A(".\\res\\win0.txt", ".\\res\\BadApple.mp3", 160, 60 + 1);//46 + 1∏ˆø’––   —› æª≠√Ê
+	//CharacterAnimation A("win0.txt", "BadApple.mp3", 240, 92, 71);//46 + 1∏ˆø’––
 	A.display();
 
 	GameState = -1;
